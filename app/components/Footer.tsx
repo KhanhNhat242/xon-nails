@@ -59,8 +59,8 @@ const Footer = () => {
                 </div>
 
                 <div className="col-span-2 md:col-span-1 lg:col-span-2 lg:pl-8">
-                    <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase">Subscribe to newsletter</p>
-
+                    <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase">X-On VIP</p>
+                    <p className='mt-6'>Sign up for emails and texts to be the first to know about exclusive deals, launches & more!</p>
                     <form action="#" method="POST" className="mt-6">
                         <div>
                             <label className="sr-only">Email</label>
