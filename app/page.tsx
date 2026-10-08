@@ -39,7 +39,7 @@ export default function Home() {
           className="w-full relative"
         >
           <CarouselContent className="cursor-pointer">
-            {productHomePage.map((item) => (
+            {productHomePage.slice(0, 11).map((item) => (
               <CarouselItem key={item.name} className="basis-1/2 sm:basis-1/3 md:basis-1/4">
                 <div className="p-1">
                   <Card className="hover:shadow-2xl">
