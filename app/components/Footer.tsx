@@ -3,15 +3,14 @@ import { InstagramOutlined, TikTokOutlined, FacebookOutlined } from '@ant-design
 
 const Footer = () => {
   return (
-    <section className="py-10 bg-gray-50 sm:pt-16 lg:pt-24">
+    <section className="py-10 bg-gray-50 sm:pt-16 lg:pt-20">
         <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
             <div className="grid grid-cols-2 md:col-span-3 lg:grid-cols-6 gap-y-16 gap-x-12">
                 <div className="col-span-2 md:col-span-3 lg:col-span-2 lg:pr-8">
-                    <img className="w-auto h-9" src="https://cdn.rareblocks.xyz/collection/celebration/images/logo.svg" alt="" />
-
-                    <p className="text-base leading-relaxed text-gray-600 mt-7">Address: 3168 Bill Beck Blvd, Kissimmee, FL 34744</p>
-                    <p className="text-base leading-relaxed text-gray-600 mt-7">Phone: 689-212-8888</p>
-
+                    <p className="text-base leading-none text-[20px] font-bold">X-ON — Press On. Slay On. Repeat.</p>
+                    <a href="tel:+16892128888" className="block text-base leading-relaxed text-gray-600 mt-2 hover:underline">
+                        Phone: 689-212-8888
+                    </a>
                 </div>
 
                 <div>

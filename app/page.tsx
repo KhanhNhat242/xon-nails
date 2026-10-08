@@ -14,6 +14,7 @@ import { productHomePage, bestSellersHomePage, reviews} from '../public/fakeData
 import { StarFilled, CheckCircleFilled, UserOutlined } from '@ant-design/icons';
 import { formatDistanceToNow } from "date-fns";
 import Image from "next/image";
+import { Tooltip } from 'antd';
 
 
 export default function Home() {
@@ -91,7 +92,7 @@ export default function Home() {
           }}
           className="w-[90%] md:w-[70%] mx-auto relative"
         >
-          <CarouselContent className="cursor-pointer">
+          <CarouselContent>
             {reviews.map((item) => (
               <CarouselItem key={item.id} className="basis-full sm:basis-1/2 md:basis-1/3">
                 <div className="p-1">
@@ -102,9 +103,13 @@ export default function Home() {
                             {Array.from({ length: item.stars }).map((_, i) => (
                               <StarFilled key={i} style={{ color: "#FFD700" }} />
                             ))}
-                            <CheckCircleFilled style={{ color: "#1890ff", marginLeft: '2px' }} />
+                            <Tooltip placement="right" title='Trustindex verifies that the original source of the review is Google.'>
+                              <CheckCircleFilled style={{ color: "#1890ff", marginLeft: '5px' }} />
+                            </Tooltip>
                           </div>
-                          <img src="./images/googleicon.png" className="w-10 md:w-15" alt="google-icon" />
+                          <Tooltip placement="left" title='Posted on Google' align={{ offset: [8, 0] }}>
+                            <img src="./images/googleicon.png" className="w-10 md:w-15" alt="google-icon" />
+                          </Tooltip>
                         </div>
                         <p className="text-base md:text-[22px] leading-snug">{item.content}</p>
                         <div className="w-full flex flex-row rounded-[50%]">
@@ -126,7 +131,7 @@ export default function Home() {
 
         <div className="relative mt-10 md:mt-20">
           <Image
-            src="/images/homebanner.png"
+             src="/images/homebanner1.png"
             alt="banner"
             width={1920}
             height={1080}
