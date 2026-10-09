@@ -1,10 +1,11 @@
 {
-  "name": "approval-system-interval",
+  "name": "xon-nails",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev --webpack",
     "build": "next build --webpack",
+    "postinstall": "prisma generate",
     "start": "next start",
     "lint": "eslint"
   },
