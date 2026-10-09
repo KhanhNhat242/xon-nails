@@ -9,7 +9,7 @@ import React from 'react'
 const allSizes = ["S", "M", "L"];
 
 const GalleryProduct = () => {
-  return (
+    return (
         <div>
             <Header />
 
@@ -39,7 +39,7 @@ const GalleryProduct = () => {
                                         </div> */}
 
                                         {allSizes.map((size) => {
-                                            const inStock = item.size.includes(size);
+                                            const inStock = item.size?.includes(size) ?? false;
                                             return inStock ? (
                                                 <div
                                                     key={size}
@@ -66,7 +66,7 @@ const GalleryProduct = () => {
 
             <Footer />
         </div>
-  )
+    )
 }
 
 export default GalleryProduct

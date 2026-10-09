@@ -32,7 +32,7 @@ const SizingChart = () => {
                 <p className='text-sm sm:text-base md:text-[18px] mt-2 font-semibold'>THE PERFECT NAILS START WITH THE PERFECT SIZE!</p>
                 </div>
 
-                <Image
+                {/* <Image
                     src="/images/sizingchartbanner2.png"
                     alt="banner"
                     width={1920}
@@ -41,7 +41,10 @@ const SizingChart = () => {
                     className="w-full h-auto my-5 px-4 sm:px-10"
                     quality={100}
                     priority
-                />
+                /> */}
+                <div className='w-full flex flex-row justify-center mt-10'>
+                    <img src="/images/sizingchartbanner2.png" alt="sizing-chart-banner" />
+                </div>
 
                 <div className='w-full px-4 sm:px-10 md:px-20 lg:px-60 pt-10'>
                 <div className='flex flex-row flex-wrap items-center justify-center sm:gap-6'>

@@ -4,155 +4,198 @@ export const productHomePage = [
     "name": "Rose Gold Chrome Grip-X",
     "price": 200,
     "size": ["S", "M", "L"],
-    "img": "/images/products/p1.JPG"
+    "img": "/images/products/p1.JPG",
+    "category": "best-seller"
   },
   {
     id: 2,
     "name": "Matte Nude Grip-X",
     "price": 177,
     "size": ["S", "M"],
-    "img": "/images/products/p2.JPG"
+    "img": "/images/products/p2.JPG",
+    "category": "best-seller"
   },
   {
     id: 3,
     "name": "French Tip Classic Grip-X",
     "price": 140,
     "size": ["M", "L"],
-    "img": "/images/products/p3.JPG"
+    "img": "/images/products/p3.JPG",
+    "category": "best-seller"
   },
   {
     id: 4,
     "name": "Glitter Ombre Grip-X",
     "price": 210,
     "size": ["S", "M", "L"],
-    "img": "/images/products/p4.JPG"
+    "img": "/images/products/p4.JPG",
+    "category": "nails"
   },
   {
     id: 5,
     "name": "Marble Swirl Grip-X",
     "price": 143,
     "size": ["S", "M"],
-    "img": "/images/products/p5.JPG"
+    "img": "/images/products/p5.JPG",
+    "category": "nails"
   },
   {
     id: 6,
     "name": "Pastel Floral Grip-X",
     "price": 154,
     "size": ["M", "L"],
-    "img": "/images/products/p6.JPG"
+    "img": "/images/products/p6.JPG",
+    "category": "nails"
   },
   {
     id: 7,
     "name": "Jet Black Glossy Grip-X",
     "price": 211,
     "size": ["S", "M", "L"],
-    "img": "/images/products/p7.JPG"
+    "img": "/images/products/p7.JPG",
+    "category": "nails"
   },
   {
     id: 8,
     "name": "Crystal Clear Grip-X",
     "price": 192,
     "size": ["S", "M", "L"],
-    "img": "/images/products/p8.JPG"
+    "img": "/images/products/p8.JPG",
+    "category": "nails"
   },
   {
     id: 9,
     "name": "Ruby Red Velvet Grip-X",
     "price": 173,
     "size": ["S", "M", "L"],
-    "img": "/images/products/p9.JPG"
+    "img": "/images/products/p9.JPG",
+    "category": "nails"
   },
   {
     id: 10,
     "name": "Sunset Ombre Grip-X",
     "price": 166,
     "size": ["S", "M", "L"],
-    "img": "/images/products/p10.JPG"
+    "img": "/images/products/p10.JPG",
+    "category": "nails"
   },
   {
     id: 11,
     "name": "Pearl Shimmer Grip-X",
     "price": 148,
     "size": ["S", "M"],
-    "img": "/images/products/p11.JPG"
+    "img": "/images/products/p11.JPG",
+    "category": "nails"
   },
   {
     id: 12,
     "name": "Metallic Silver Grip-X",
     "price": 204,
     "size": ["S", "M", "L"],
-    "img": "/images/products/p12.JPG"
+    "img": "/images/products/p12.JPG",
+    "category": "nails"
   },
   {
     id: 13,
     "name": "Lavender Dream Grip-X",
     "price": 144,
     "size": ["M", "L"],
-    "img": "/images/products/p13.JPG"
+    "img": "/images/products/p13.JPG",
+    "category": "nails"
   },
   {
     id: 14,
     "name": "Coral Reef Grip-X",
     "price": 176,
     "size": ["S", "M", "L"],
-    "img": "/images/products/p14.JPG"
+    "img": "/images/products/p14.JPG",
+    "category": "nails"
   },
   {
     id: 15,
     "name": "Champagne Gold Grip-X",
     "price": 155,
     "size": ["S", "M", "L"],
-    "img": "/images/products/p15.JPG"
+    "img": "/images/products/p15.JPG",
+    "category": "nails"
   },
   {
     id: 16,
     "name": "Mint Fresh Grip-X",
     "price": 159,
     "size": ["S", "M", "L"],
-    "img": "/images/products/p16.JPG"
+    "img": "/images/products/p16.JPG",
+    "category": "nails"
   },
   {
     id: 17,
     "name": "Blush Pink Satin Grip-X",
     "price": 181,
     "size": ["S", "M", "L"],
-    "img": "/images/products/p17.JPG"
+    "img": "/images/products/p17.JPG",
+    "category": "nails"
   },
   {
     id: 18,
     "name": "Galaxy Holographic Grip-X",
     "price": 209,
     "size": ["S", "M", "L"],
-    "img": "/images/products/p18.JPG"
+    "img": "/images/products/p18.JPG",
+    "category": "nails"
   },
   {
     id: 19,
     "name": "Ivory Lace Grip-X",
     "price": 154,
     "size": ["S", "M"],
-    "img": "/images/products/p19.JPG"
+    "img": "/images/products/p19.JPG",
+    "category": "nails"
   },
   {
     id: 20,
     "name": "Emerald Green Chrome Grip-X",
     "price": 153,
     "size": ["S", "M", "L"],
-    "img": "/images/products/p20.JPG"
+    "img": "/images/products/p20.JPG",
+    "category": "nails"
   },
   {
     id: 21,
     "name": "Caramel Swirl Grip-X",
     "price": 180,
     "size": ["M", "L"],
-    "img": "/images/products/p21.JPG"
+    "img": "/images/products/p21.JPG",
+    "category": "nails"
   },
   {
     id: 22,
     "name": "Icy Blue Frost Grip-X",
     "price": 165,
     "size": ["M", "L"],
-    "img": "/images/products/p22.JPG"
-  }
+    "img": "/images/products/p22.JPG",
+    "category": "nails"
+  },
+  {
+    id: 23,
+    "name": "Remover",
+    "price": 3.99,
+    "img": "/images/products/p23.JPG",
+    "category": "essential"
+  },
+  {
+    id: 24,
+    "name": "COLD GEL GLUE & BUFFERS",
+    "price": 3.99,
+    "img": "/images/products/p24.JPG",
+    "category": "essential"
+  },
+  {
+    id: 25,
+    "name": "COLD GEL GLUE",
+    "price": 3.99,
+    "img": "/images/products/p25.JPG",
+    "category": "essential"
+  },
 ]
 
 export const bestSellersHomePage = [
@@ -409,4 +452,28 @@ export const comingSoonProduct = [
     "img": "/images/products/nf/d12.jpeg",
     "type": "nf",
   },
+]
+
+
+export const blog = [
+  {
+    "id": 1,
+    "title": "Extra-Long Handmade Nail Luxury",
+    "url": "https://lalafolie.us/extra-long-handmade-nail-luxury/",
+    "excerpt": "An inside look at Lalafolie's Signature Collection — a line of extra-long, handmade luxury nails featuring exclusive shapes and artistic designs not found elsewhere.",
+    "content": "The Lalafolie Signature Collection treats nails as wearable art rather than a simple accessory. Each design is hand-crafted by in-house artists with close attention to detail, and the collection spans several distinct styles: hand-painted 3D florals with layered petals, gold foil linework and hand-set crystals; mirror-finish chrome and metallic sets in wine red, gold and multi-tone finishes; themed 3D sculptural work such as dragon-scale textures and sculpted charms; fine hand-painted artwork with portrait-level detail; smooth airbrushed aura and ombre color transitions; and sharp, extra-long shapes like stiletto, tapered coffin and soft almond. Every set is built on professional gel and premium acrylic powder for durability and a natural fit, finished with a high-gloss top coat that locks in color and shine, with crystals, foils and charms hand-set to stay in place. Lalafolie positions this collection as leading the U.S. market in originality, since the designs are developed ahead of trends rather than copied from them. The piece also contrasts the at-home experience with a traditional salon visit: roughly two hours and up to $200 at a salon, versus about fifteen minutes at home thanks to the brand's no-UV, no-filing Cold Gel Glue application — while aiming to match the finish quality of a top U.S. salon.",
+    "tags": ["handmade nails", "luxury", "signature collection", "nail art"],
+    "img": "/images/products/p3.JPG",
+    "date": "2026-07-01"
+  },
+  {
+    "id": 2,
+    "title": "Salon-Quality Handmade Nails, Reimagined for Home",
+    "url": "https://lalafolie.us/salon-quality-handmade-nails-reimagined-for-home/",
+    "excerpt": "Why Lalafolie's handmade approach to press-on nails and its exclusive Cold Gel Glue adhesive aim to deliver a genuine salon-level result at home.",
+    "content": "The article opens by contrasting mass-produced press-on nails — molded in plastic with pre-printed designs that tend to look flat, wear unevenly and snap easily — with Lalafolie's handmade approach. Each Grip-X Nails set is crafted nail by nail using professional-grade gel and premium acrylic powder for a more realistic, salon-caliber look. Key features highlighted include on-trend sharp designs tracking current U.S. nail trends, a premium high-gloss finish for long-lasting color, hand-set crystals and charms, and a catalog of over 1,000 designs ranging from everyday sets to statement luxury nails, shipped from U.S. stock. The piece then introduces Cold Gel Glue, the brand's proprietary adhesive built specifically for handmade sets: it air-dries without a UV lamp, uses a gentler TPO-free formula, holds for two or more weeks, is ready in about 10 minutes with no filing required, is MSDS-certified and made in the USA, and is reusable for better value — with a tip to press firmly for about 20 seconds for the strongest bond. Finally, it covers the range of styles available, grouped into aesthetics like Y2K, Fairycore and Korean Luxury, with sizing offered in S, M and L (true to U.S. sizing), multiple lengths, and a wide range of shapes.",
+    "tags": ["handmade nails", "cold gel glue", "at-home manicure", "nail styles"],
+    "img": "/images/products/p8.JPG",
+    "date": "2026-07-01"
+  }
 ]
