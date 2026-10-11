@@ -79,8 +79,8 @@ const Shop = () => {
             <main className="flex-1 w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
                 <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 items-start">
                     {/* Phần bên trái: bám dính tự động bên trái (sticky/fixed) khi cuộn */}
-                    <aside className="w-full lg:w-72 xl:w-80 shrink-0 lg:sticky lg:top-24 self-start z-20">
-                        <div className="bg-white p-5 rounded-2xl border border-gray-100 shadow-xs space-y-6 max-h-[calc(100vh-7rem)] overflow-y-auto">
+                    <aside className="w-full md:w-72 xl:w-80 shrink-0 md:sticky md:top-[100px] md:max-h-[calc(100vh-120px)] self-start z-20">
+                        <div className="bg-white p-5 rounded-2xl border border-gray-100 shadow-xs space-y-6 overflow-y-auto">
                             <div>
                                 <Search
                                     placeholder="Search..."
@@ -199,12 +199,7 @@ const Shop = () => {
                             })}
                         </div>
 
-                        <div className="flex items-center justify-between mt-4">
-                            <p className="text-xs text-gray-500 font-medium">
-                                Hiển thị {filteredProducts.length > 0 ? (currentPage - 1) * ITEMS_PER_PAGE + 1 : 0} -{' '}
-                                {Math.min(currentPage * ITEMS_PER_PAGE, filteredProducts.length)} trên tổng số {filteredProducts.length} sản phẩm
-                            </p>
-                        </div>
+
 
                         {/* Danh sách sản phẩm chia thành 4 phần bằng nhau */}
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 mt-6">
