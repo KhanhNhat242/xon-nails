@@ -53,7 +53,9 @@ const Shop = () => {
 
     // Reset về trang 1 khi thay đổi bất kỳ bộ lọc nào
     useEffect(() => {
-        setCurrentPage(1)
+        setTimeout(() => {
+            setCurrentPage(1)
+        }, 100)
     }, [searchTerm, priceRange, activeCategory, selectedShape])
 
     const paginatedProducts = useMemo(() => {
