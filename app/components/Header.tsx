@@ -1,6 +1,7 @@
 'use client'
 
 import { Menu, X } from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
@@ -41,7 +42,14 @@ const Header = () => {
                     <nav className="flex items-center justify-between h-16 lg:h-20">
                         <div className="flex-shrink-0">
                             <Link href="/" title="" className="flex items-center">
-                                <img className="h-10 lg:h-14 w-auto object-contain" src="/images/IMG_7111.JPG" alt="main-logo" />
+                                <Image
+                                    src="/images/IMG_7111.JPG"
+                                    alt="main-logo"
+                                    width={56}
+                                    height={56}
+                                    className="h-10 lg:h-14 w-auto object-contain"
+                                    priority
+                                />
                             </Link>
                         </div>
 

@@ -1,6 +1,7 @@
 'use client'
 
 import { Product } from '@/type'
+import Image from 'next/image'
 import Link from 'next/link'
 
 type ProductCardProps = {
@@ -18,10 +19,13 @@ const ProductCard = ({ product }: ProductCardProps) => {
         >
             <div>
                 <div className="relative w-full aspect-square overflow-hidden rounded-xl bg-gray-50">
-                    <img
+                    <Image
                         src={product.img}
                         alt={product.name}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        fill
+                        sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        priority={product.id === 1}
                     />
                     {product.category === 'best-seller' && (
                         <span className="absolute top-2 left-2 bg-black/80 backdrop-blur-xs text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">

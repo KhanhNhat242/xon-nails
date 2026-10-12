@@ -5,6 +5,7 @@ import Header from '@/app/components/Header'
 import { productHomePage } from '@/public/fakeData/fakeapi'
 import { InputNumber, message, Rate } from 'antd'
 import { ArrowLeft, Check, ChevronLeft, ChevronRight, Ruler, ShieldCheck, ShoppingBag, Truck } from 'lucide-react'
+import Image from 'next/image'
 import { useParams, useRouter } from 'next/navigation'
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 
@@ -136,7 +137,7 @@ const DetailProduct = () => {
                     {/* Phần bên trái: width khoảng 40vw là hình ảnh sản phẩm */}
                     <div className="w-full lg:w-[40vw] max-w-[620px] shrink-0">
                         <div className="relative w-full aspect-square overflow-hidden rounded-3xl bg-neutral-50 border border-gray-100 shadow-xs group">
-                            <img
+                            <Image
                                 src={product.img}
                                 alt={product.name}
                                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -374,7 +375,7 @@ const DetailProduct = () => {
                                                 className="group cursor-pointer bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-gray-300 hover:shadow-lg transition-all duration-300"
                                             >
                                                 <div className="relative aspect-square overflow-hidden bg-neutral-50">
-                                                    <img
+                                                    <Image
                                                         src={item.img}
                                                         alt={item.name}
                                                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"

@@ -2,7 +2,7 @@
 
 import Footer from '@/app/components/Footer'
 import Header from '@/app/components/Header'
-import ProductCard from '@/app/components/ProductCart'
+import ProductCard from '@/app/components/ProductCard'
 import { productHomePage } from '@/public/fakeData/fakeapi'
 import { useMemo } from 'react'
 

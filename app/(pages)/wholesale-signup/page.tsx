@@ -2,7 +2,12 @@
 
 import Footer from '@/app/components/Footer'
 import Header from '@/app/components/Header'
-import { Button, Form, Input } from 'antd'
+import { Button } from 'antd'
+import dynamic from 'next/dynamic'
+import Image from 'next/image'
+
+const Form = dynamic(() => import('antd').then(mod => mod.Form), { ssr: false })
+const Input = dynamic(() => import('antd').then(mod => mod.Input), { ssr: false })
 
 type MembershipOption = {
   value: string
@@ -38,7 +43,7 @@ const WholesaleSignup = () => {
       <Header />
 
       <div className="w-full relative">
-        <img
+        <Image
           src="./images/signupbanner.png"
           alt="signup-banner"
           className="w-full h-auto"

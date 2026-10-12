@@ -44,7 +44,7 @@ export default function Home() {
                 <div className="p-1">
                   <Card className="hover:shadow-2xl">
                     <CardContent className="flex flex-col aspect-square items-center justify-center p-3 md:p-6">
-                      <img src={item.img} className="rounded-lg" alt="product-img" />
+                      <Image src={item.img} className="rounded-lg" alt="product-img" />
                       <p className="text-sm md:text-lg font-semibold text-center">{item.name}</p>
                       <p className="text-sm md:text-base">${item.price}</p>
                     </CardContent>
@@ -108,7 +108,13 @@ export default function Home() {
                             </Tooltip>
                           </div>
                           <Tooltip placement="left" title='Posted on Google' align={{ offset: [8, 0] }}>
-                            <img src="./images/googleicon.png" className="w-10 md:w-15" alt="google-icon" />
+                            <Image
+                              src="./images/googleicon.png"
+                              alt="google-icon"
+                              width={50}
+                              height={28}
+                              className="w-10 md:w-15"
+                          />
                           </Tooltip>
                         </div>
                         <p className="text-base md:text-[22px] leading-snug">{item.content}</p>
@@ -132,13 +138,13 @@ export default function Home() {
         <div className="relative mt-10 md:mt-20">
           <Image
              src="/images/homebanner1.png"
-            alt="banner"
-            width={1920}
-            height={1080}
-            sizes="100vw"
-            className="w-full h-auto"
-            quality={100}
-            priority
+              alt="banner"
+              width={1920}
+              height={1080}
+              sizes="100vw"
+              className="w-full h-auto"
+              quality={100}
+              priority
           />
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center md:items-end md:justify-center md:text-right md:top-1/2 md:right-20 md:-translate-y-1/2 md:inset-auto px-4 md:px-0">
             <p className="text-white text-[28px] sm:text-[40px] md:text-[60px] font-bold leading-none">SHOP US IRL</p>

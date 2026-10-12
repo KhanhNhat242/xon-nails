@@ -2,11 +2,12 @@
 
 import Footer from '@/app/components/Footer'
 import Header from '@/app/components/Header'
-import ProductCard from '@/app/components/ProductCart'
+import ProductCard from '@/app/components/ProductCard'
 import { Pagination, Slider } from 'antd'
 import Search from 'antd/es/input/Search'
 import { productHomePage } from '@/public/fakeData/fakeapi'
 import { useEffect, useMemo, useState } from 'react'
+import Image from 'next/image'
 
 const ITEMS_PER_PAGE = 16
 
@@ -147,7 +148,7 @@ const Shop = () => {
                                                     }`}
                                             >
                                                 <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center">
-                                                    <img
+                                                    <Image
                                                         src={shape.img}
                                                         alt={shape.name}
                                                         className="w-full h-full object-contain transition-transform duration-200 group-hover:scale-110"
