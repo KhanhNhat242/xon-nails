@@ -27,7 +27,7 @@ const Header = () => {
 
     return (
         <div>
-            <header className={`relative w-full z-50 bg-white shadow-sm lg:fixed lg:top-0 lg:left-0 lg:pb-0 ${menuOpen ? 'pb-4' : 'pb-0'}`}>
+            <header className={`fixed top-0 left-0 w-full z-50 bg-white shadow-sm ${menuOpen ? 'pb-4' : 'pb-0'}`}>
                 <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                     {/* lg */}
                     <nav className="flex items-center justify-between h-16 lg:h-20">
@@ -92,8 +92,8 @@ const Header = () => {
                 </div>
             </header>
 
-            {/* Div đệm chỉ cần trên desktop khi header fixed */}
-            <div className="hidden lg:block lg:h-[60px]" />
+            {/* Div đệm — khớp chiều cao thanh header fixed */}
+            <div className="h-16 lg:h-20" />
         </div>
     )
 }
