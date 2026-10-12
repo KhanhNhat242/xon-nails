@@ -20,7 +20,7 @@ const GalleryProduct = () => {
                     <p className='text-[28px] sm:text-[36px] md:text-[45px] font-bold'>Product Gallery</p>
                     <p className='text-sm sm:text-base md:text-[18px] font-semibold'>Explore the products currently available in our collection.</p>
                     <a
-                        href=""
+                        href="/shop"
                         className="mt-4 px-6 py-2 bg-black text-white text-sm sm:text-base font-semibold rounded-full"
                     >
                         SHOP NOW

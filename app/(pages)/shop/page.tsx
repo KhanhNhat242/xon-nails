@@ -200,7 +200,6 @@ const Shop = () => {
                         </div>
 
 
-
                         {/* Danh sách sản phẩm chia thành 4 phần bằng nhau */}
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 mt-6">
                             {paginatedProducts.length > 0 ? (
@@ -257,13 +256,13 @@ const Shop = () => {
                             ) : (
                                 <div className="col-span-full py-16 text-center">
                                     <p className="text-gray-500 text-base font-medium">
-                                        Không tìm thấy sản phẩm nào phù hợp.
+                                        Product not found.
                                     </p>
                                     <button
                                         onClick={handleResetFilters}
                                         className="mt-4 px-5 py-2 bg-black text-white text-xs font-semibold rounded-full hover:bg-gray-800 transition cursor-pointer"
                                     >
-                                        Đặt lại bộ lọc
+                                        Reset Filter
                                     </button>
                                 </div>
                             )}

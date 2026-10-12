@@ -1,55 +1,99 @@
 'use client'
 
-import React from 'react'
-// import mainlogo from '../../public/images/IMG_7111.JPG'
+import { Menu, X } from 'lucide-react'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import React, { useEffect, useState } from 'react'
+
+const navLinks = [
+    { href: '/', label: 'Home' },
+    { href: '/shop', label: 'Shop' },
+    { href: '/about', label: 'About' },
+    { href: '/wholesale-signup', label: 'Wholesale Signup' },
+    { href: '/sizing-chart', label: 'Sizing Chart' },
+    { href: '/gallery-product', label: 'Gallery Product' },
+    { href: '/gallery-coming-soon', label: 'Gallery Coming Soon' },
+    { href: '/blog', label: 'Blog' },
+    { href: '/contact-us', label: 'Contact' },
+]
 
 const Header = () => {
+    const pathname = usePathname()
+    const [menuOpen, setMenuOpen] = useState(false)
+
+    useEffect(() => {
+        setMenuOpen(false)
+    }, [pathname])
+
     return (
         <div>
-            <header className="fixed top-0 left-0 w-full z-50 pb-6 bg-white lg:pb-0 shadow-sm">
+            <header className={`relative w-full z-50 bg-white shadow-sm lg:fixed lg:top-0 lg:left-0 lg:pb-0 ${menuOpen ? 'pb-4' : 'pb-0'}`}>
                 <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                     {/* lg */}
                     <nav className="flex items-center justify-between h-16 lg:h-20">
                         <div className="flex-shrink-0">
-                            <a href="/" title="" className="flex items-center">
+                            <Link href="/" title="" className="flex items-center">
                                 <img className="h-10 lg:h-14 w-auto object-contain" src="/images/IMG_7111.JPG" alt="main-logo" />
-                            </a>
+                            </Link>
                         </div>
 
                         <div className="hidden lg:flex lg:items-center lg:ml-auto lg:space-x-10">
-                            <a href="/" title="" className="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Home </a>
-                            <a href="/shop" title="" className="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Shop </a>
-                            <a href="/about" title="" className="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> About </a>
-                            <a href="/wholesale-signup" title="" className="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Wholesale Signup </a>
-                            <a href="/sizing-chart" title="" className="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Sizing Chart </a>
-                            <a href="/gallery-product" title="" className="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Gallery Product </a>
-                            <a href="/gallery-coming-soon" title="" className="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Gallery Coming Soon </a>
-                            <a href="/blog" title="" className="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Blog </a>
-                            <a href="/contact-us" title="" className="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Contact </a>
+                            {navLinks.map((link) => {
+                                const isActive = pathname === link.href
+                                return (
+                                    <Link
+                                        key={link.href}
+                                        href={link.href}
+                                        title=""
+                                        className={`text-base font-medium transition-all duration-200 hover:text-blue-600 focus:text-blue-600 ${isActive ? 'text-blue-600 font-semibold' : 'text-black'
+                                            }`}
+                                    >
+                                        {link.label}
+                                    </Link>
+                                )
+                            })}
                         </div>
+
+                        <button
+                            type="button"
+                            onClick={() => setMenuOpen((open) => !open)}
+                            className="inline-flex items-center justify-center w-10 h-10 rounded-lg text-neutral-900 hover:bg-neutral-100 transition-colors lg:hidden"
+                            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+                            aria-expanded={menuOpen}
+                        >
+                            {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+                        </button>
                     </nav>
 
                     {/* xs */}
-                    <nav className="pt-4 pb-6 bg-white border border-gray-200 rounded-md shadow-md lg:hidden">
-                        <div className="flow-root">
-                            <div className="flex flex-col px-6 -my-2 space-y-1">
-                                <a href="/" title="" className="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Home </a>
-                                <a href="/shop" title="" className="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Shop </a>
-                                <a href="/about" title="" className="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> About </a>
-                                <a href="/wholesale-signup" title="" className="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Wholesale Signup </a>
-                                <a href="/sizing-chart" title="" className="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Sizing Chart </a>
-                                <a href="/gallery-product" title="" className="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Gallery Product </a>
-                                <a href="/gallery-coming-soon" title="" className="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Gallery Coming Soon</a>
-                                <a href="/blog" title="" className="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Blog </a>
-                                <a href="/contact-us" title="" className="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Contact </a>
+                    {menuOpen && (
+                        <nav className="pt-2 pb-4 bg-white border border-gray-200 rounded-md shadow-md lg:hidden">
+                            <div className="flow-root">
+                                <div className="flex flex-col px-6 -my-2 space-y-1">
+                                    {navLinks.map((link) => {
+                                        const isActive = pathname === link.href
+                                        return (
+                                            <Link
+                                                key={link.href}
+                                                href={link.href}
+                                                title=""
+                                                onClick={() => setMenuOpen(false)}
+                                                className={`inline-flex py-2 text-base font-medium transition-all duration-200 hover:text-blue-600 focus:text-blue-600 ${isActive ? 'text-blue-600 font-semibold' : 'text-black'
+                                                    }`}
+                                            >
+                                                {link.label}
+                                            </Link>
+                                        )
+                                    })}
+                                </div>
                             </div>
-                        </div>
-                    </nav>
+                        </nav>
+                    )}
                 </div>
             </header>
 
-            {/* Div đệm — chiều cao khớp với header, tránh nội dung trang bị header fixed đè lên */}
-            <div className="h-[100px] lg:h-[60px]" />
+            {/* Div đệm chỉ cần trên desktop khi header fixed */}
+            <div className="hidden lg:block lg:h-[60px]" />
         </div>
     )
 }
