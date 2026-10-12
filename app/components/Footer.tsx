@@ -1,22 +1,24 @@
+'use client'
+
 import React from 'react'
 import { InstagramOutlined, TikTokOutlined, FacebookOutlined } from '@ant-design/icons';
 
 const Footer = () => {
     return (
-        <section className="border-t border-solid border-black py-10 bg-gray-50 sm:pt-16 lg:pt-20">
+        <section className="border-t border-solid border-black py-8 sm:py-10">
             <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-                <div className="grid grid-cols-2 md:col-span-3 lg:grid-cols-6 gap-y-16 gap-x-12">
-                    <div className="col-span-2 md:col-span-3 lg:col-span-2 lg:pr-8">
+                <div className="grid grid-cols-2 gap-x-8 gap-y-8 md:grid-cols-4 lg:grid-cols-7">
+                    <div className="col-span-2 lg:pr-6">
                         <p className="text-base leading-none text-[20px] font-bold">X-ON — Press On. Slay On. Repeat.</p>
                         <a href="tel:+16892128888" className="block text-base leading-relaxed text-gray-600 mt-2 hover:underline">
                             Phone: 689-212-8888
                         </a>
                     </div>
 
-                    <div>
+                    <div className="col-span-2">
                         <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase">Brand</p>
 
-                        <ul className="mt-6 space-y-4">
+                        <ul className="mt-4 grid grid-cols-2 gap-x-4 gap-y-3">
                             <li>
                                 <a href="/shop" title="" className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Shop </a>
                             </li>
@@ -41,10 +43,10 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    <div>
+                    <div className="col-span-2 lg:col-span-1">
                         <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase">Social</p>
 
-                        <ul className="mt-6 space-y-4">
+                        <ul className="mt-4 space-y-3">
                             <li>
                                 <a href="#" title="" className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> <InstagramOutlined className='mr-2' /> Instagram </a>
                             </li>
@@ -57,21 +59,21 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    <div className="col-span-2 md:col-span-1 lg:col-span-2 lg:pl-8">
+                    <div className="col-span-2 lg:pl-4">
                         <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase">X-On VIP</p>
-                        <p className='mt-6'>Sign up for emails and texts to be the first to know about exclusive deals, launches & more!</p>
-                        <form action="#" method="POST" className="mt-6">
+                        <p className='mt-4'>Sign up for emails and texts to be the first to know about exclusive deals, launches & more!</p>
+                        <form action="#" method="POST" className="mt-4">
                             <div>
                                 <label className="sr-only">Email</label>
-                                <input type="email" name="email" id="email" placeholder="Enter your email" className="block w-full p-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600" />
+                                <input type="email" name="email" id="email" placeholder="Enter your email" className="block w-full p-2 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600" />
                             </div>
 
-                            <button type="submit" className="inline-flex items-center justify-center px-6 py-4 mt-3 font-semibold text-white transition-all duration-200 bg-blue-600 rounded-md hover:bg-blue-700 focus:bg-blue-700">Subscribe</button>
+                            <button type="submit" className="inline-flex items-center justify-center px-6 py-2 mt-3 font-semibold text-white transition-all duration-200 bg-blue-600 rounded-md cursor-pointer hover:bg-blue-700 focus:bg-blue-700">Subscribe</button>
                         </form>
                     </div>
                 </div>
 
-                <hr className="mt-16 mb-10 border-gray-200" />
+                <hr className="mt-10 mb-6 border-gray-200" />
 
                 <p className="text-sm text-center text-gray-600">© Copyright 2021, All Rights Reserved by Postcraft</p>
             </div>
