@@ -2,12 +2,8 @@
 
 import Footer from '@/app/components/Footer'
 import Header from '@/app/components/Header'
-import { Button } from 'antd'
-import dynamic from 'next/dynamic'
+import { Button, Form, Input } from 'antd'
 import Image from 'next/image'
-
-const Form = dynamic(() => import('antd').then(mod => mod.Form), { ssr: false })
-const Input = dynamic(() => import('antd').then(mod => mod.Input), { ssr: false })
 
 type MembershipOption = {
   value: string
