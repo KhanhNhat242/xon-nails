@@ -130,17 +130,6 @@ const DetailProduct = () => {
             <Header />
 
             <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-16">
-                {/* Nút điều hướng quay lại */}
-                <div className="mb-6 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-gray-500">
-                    <button
-                        onClick={() => router.push('/shop')}
-                        className="hover:text-black flex items-center gap-1.5 transition-colors cursor-pointer"
-                    >
-                        <ArrowLeft className="w-3.5 h-3.5" /> Back to Shop
-                    </button>
-                    <span>/</span>
-                    <span className="text-gray-900 font-bold truncate max-w-[200px] sm:max-w-none">{product.name}</span>
-                </div>
 
                 {/* Bố cục trang chi tiết chia làm 2 phần */}
                 <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start justify-center">

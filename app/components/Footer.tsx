@@ -26,9 +26,9 @@ const Footer = () => {
                             <li>
                                 <a href="/wholesale-signup" title="" className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Wholesale Signup </a>
                             </li>
-                            {/* <li>
-                            <a href="#" title="" className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Bundle and Save </a>
-                        </li> */}
+                            <li>
+                                <a href="/bundle-and-save" title="" className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Bundle and Save </a>
+                            </li>
                             <li>
                                 <a href="/gallery-product" title="" className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Gallery Product </a>
                             </li>

@@ -196,6 +196,27 @@ export const productHomePage = [
     "img": "/images/products/p25.JPG",
     "category": "essential"
   },
+  {
+    id: 26,
+    "name": "Combo Cold Gel Glue",
+    "price": 9.99,
+    "img": "/images/products/p25.JPG",
+    "category": "combo"
+  },
+  {
+    id: 27,
+    "name": "Combo Cold Gel Glue & Remover",
+    "price": 5.99,
+    "img": "/images/products/p25.JPG",
+    "category": "combo"
+  },
+  {
+    id: 28,
+    "name": "13 Trending Y2K Handmade Nail Sets + 2 Bottles Premium Gel Glue",
+    "price": 2.68,
+    "img": "/images/products/p25.JPG",
+    "category": "combo"
+  },
 ]
 
 export const bestSellersHomePage = [

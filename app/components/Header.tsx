@@ -10,12 +10,20 @@ const navLinks = [
     { href: '/shop', label: 'Shop' },
     { href: '/about', label: 'About' },
     { href: '/wholesale-signup', label: 'Wholesale Signup' },
+    { href: '/bundle-and-save', label: 'Bundle and Save' },
     { href: '/sizing-chart', label: 'Sizing Chart' },
     { href: '/gallery-product', label: 'Gallery Product' },
     { href: '/gallery-coming-soon', label: 'Gallery Coming Soon' },
     { href: '/blog', label: 'Blog' },
     { href: '/contact-us', label: 'Contact' },
 ]
+
+const isLinkActive = (pathname: string, href: string) => {
+    if (href === '/') {
+        return pathname === '/'
+    }
+    return pathname.startsWith(href)
+}
 
 const Header = () => {
     const pathname = usePathname()
@@ -27,7 +35,7 @@ const Header = () => {
 
     return (
         <div>
-            <header className={`fixed top-0 left-0 w-full z-50 bg-white shadow-sm ${menuOpen ? 'pb-4' : 'pb-0'}`}>
+             <header className={`fixed top-0 left-0 w-full z-50 bg-white shadow-sm ${menuOpen ? 'pb-4' : 'pb-0'}`}>
                 <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                     {/* lg */}
                     <nav className="flex items-center justify-between h-16 lg:h-20">
@@ -39,7 +47,7 @@ const Header = () => {
 
                         <div className="hidden lg:flex lg:items-center lg:ml-auto lg:space-x-10">
                             {navLinks.map((link) => {
-                                const isActive = pathname === link.href
+                                const isActive = isLinkActive(pathname, link.href)
                                 return (
                                     <Link
                                         key={link.href}
@@ -71,7 +79,7 @@ const Header = () => {
                             <div className="flow-root">
                                 <div className="flex flex-col px-6 -my-2 space-y-1">
                                     {navLinks.map((link) => {
-                                        const isActive = pathname === link.href
+                                        const isActive = isLinkActive(pathname, link.href)
                                         return (
                                             <Link
                                                 key={link.href}

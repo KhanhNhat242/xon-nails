@@ -2,11 +2,11 @@
 
 import Footer from '@/app/components/Footer'
 import Header from '@/app/components/Header'
+import ProductCard from '@/app/components/ProductCart'
 import { Pagination, Slider } from 'antd'
 import Search from 'antd/es/input/Search'
 import { productHomePage } from '@/public/fakeData/fakeapi'
 import { useEffect, useMemo, useState } from 'react'
-import { useRouter } from 'next/navigation'
 
 const ITEMS_PER_PAGE = 16
 
@@ -32,8 +32,6 @@ const Shop = () => {
     const [activeCategory, setActiveCategory] = useState('all')
     const [selectedShape, setSelectedShape] = useState('')
     const [currentPage, setCurrentPage] = useState(1)
-
-    const router = useRouter()
 
     const filteredProducts = useMemo(() => {
         return productHomePage.filter((item) => {
@@ -204,54 +202,7 @@ const Shop = () => {
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 mt-6">
                             {paginatedProducts.length > 0 ? (
                                 paginatedProducts.map((item) => (
-                                    <div
-                                        key={item.id}
-                                        className="group flex flex-col justify-between bg-white border border-gray-100 rounded-2xl p-3 shadow-xs cursor-pointer hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
-                                        onClick={() => router.push(`/shop/product/${item.id}`)}
-                                    >
-                                        <div>
-                                            <div className="relative w-full aspect-square overflow-hidden rounded-xl bg-gray-50">
-                                                <img
-                                                    src={item.img}
-                                                    alt={item.name}
-                                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                                />
-                                                {item.category === 'best-seller' && (
-                                                    <span className="absolute top-2 left-2 bg-black/80 backdrop-blur-xs text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">
-                                                        Best Seller
-                                                    </span>
-                                                )}
-                                            </div>
-
-                                            <div className="mt-3">
-                                                <h4
-                                                    className="text-sm font-semibold text-gray-900 group-hover:text-black line-clamp-1"
-                                                    title={item.name}
-                                                >
-                                                    {item.name}
-                                                </h4>
-
-                                                {item.size && item.size.length > 0 && (
-                                                    <div className="flex gap-1 mt-2">
-                                                        {item.size.map((sz: string) => (
-                                                            <span
-                                                                key={sz}
-                                                                className="text-[10px] font-medium px-1.5 py-0.5 border border-gray-200 rounded text-gray-500"
-                                                            >
-                                                                {sz}
-                                                            </span>
-                                                        ))}
-                                                    </div>
-                                                )}
-                                            </div>
-                                        </div>
-
-                                        <div className="mt-3 pt-2.5 border-t border-gray-50 flex items-center justify-between">
-                                            <p className="text-base font-bold text-gray-900">
-                                                ${typeof item.price === 'number' ? item.price.toFixed(2) : item.price}
-                                            </p>
-                                        </div>
-                                    </div>
+                                    <ProductCard key={item.id} product={item} />
                                 ))
                             ) : (
                                 <div className="col-span-full py-16 text-center">
