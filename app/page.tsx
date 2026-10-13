@@ -44,7 +44,13 @@ export default function Home() {
                 <div className="p-1">
                   <Card className="hover:shadow-2xl">
                     <CardContent className="flex flex-col aspect-square items-center justify-center p-3 md:p-6">
-                      <Image src={item.img} className="rounded-lg" alt="product-img" />
+                      <Image
+                        src={item.img}
+                        alt={item.name}
+                        width={300}
+                        height={300}
+                        className="rounded-lg w-full h-auto"
+                      />
                       <p className="text-sm md:text-lg font-semibold text-center">{item.name}</p>
                       <p className="text-sm md:text-base">${item.price}</p>
                     </CardContent>
@@ -72,17 +78,23 @@ export default function Home() {
 
         <p className="text-[22px] md:text-[30px] text-center font-bold mt-10 md:mt-20 mb-5"> BEST SELLERS </p>
 
-        <div className="w-full grid grid-cols-2 md:flex md:flex-row gap-3 md:gap-5 px-3 md:px-5">
-          {
-            bestSellersHomePage.map((item) => (
-              <div key={item.name} >
-                <img src="/images/products/p1.JPG" className="rounded-xl" alt="best-seller-product-img" />
-                <p className="text-base md:text-[25px] font-bold">{item.name}</p>
-                <p className="text-sm md:text-[18px]">${item.price}</p>
-              </div>
-            ))
-          }
-        </div>
+        <div className="w-full grid grid-cols-3 gap-2 sm:gap-4 md:gap-5 px-3 sm:px-4 md:px-5">
+  {
+    bestSellersHomePage.map((item) => (
+      <div key={item.name}>
+        <Image
+          src="/images/products/p1.JPG"
+          alt={item.name}
+          width={300}
+          height={300}
+          className="rounded-xl w-full h-auto aspect-square object-cover"
+        />
+        <p className="text-xs sm:text-base md:text-[25px] font-bold mt-2 line-clamp-1">{item.name}</p>
+        <p className="text-[10px] sm:text-sm md:text-[18px]">${item.price}</p>
+      </div>
+    ))
+  }
+</div>
 
         <p className="text-[22px] md:text-[30px] text-center font-bold mt-10 md:mt-20 mb-5"> OUR REVIEWS </p>
         <Carousel
@@ -109,7 +121,7 @@ export default function Home() {
                           </div>
                           <Tooltip placement="left" title='Posted on Google' align={{ offset: [8, 0] }}>
                             <Image
-                              src="./images/googleicon.png"
+                              src="/images/googleicon.png"
                               alt="google-icon"
                               width={50}
                               height={28}

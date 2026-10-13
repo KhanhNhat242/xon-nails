@@ -151,6 +151,8 @@ const Shop = () => {
                                                     <Image
                                                         src={shape.img}
                                                         alt={shape.name}
+                                                        width={48}
+                                                        height={48}
                                                         className="w-full h-full object-contain transition-transform duration-200 group-hover:scale-110"
                                                     />
                                                 </div>
